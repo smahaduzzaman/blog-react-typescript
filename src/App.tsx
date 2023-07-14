@@ -1,13 +1,11 @@
-import Navbar from './Components/Navbar';
-import BlogList from './Components/BlogList';
+import Navbar from "./Components/Navbar";
+import Button from "./Components/Button/Button";
+import Home from "./Pages/Home";
 
 const App: React.FC = () => {
   return (
-    <div>
-      <Navbar />
-      <div className="container mx-auto">
-        <BlogList />
-      </div>
+    <div className="">
+      <Home></Home>
     </div>
   );
 };

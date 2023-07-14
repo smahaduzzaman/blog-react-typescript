@@ -1,4 +1,4 @@
-import { blogPosts } from '../data/blogPosts';
+import { blogPosts } from "../data/blogPosts";
 
 interface BlogPostProps {
   postId: number;
@@ -6,6 +6,7 @@ interface BlogPostProps {
 
 const BlogPost: React.FC<BlogPostProps> = ({ postId }) => {
   const post = blogPosts.find((post) => post.id === postId);
+  console.log(post);
 
   if (!post) {
     return <div>Post not found</div>;

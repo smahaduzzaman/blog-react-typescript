@@ -1,15 +1,20 @@
-import React from 'react';
-import { Switch, Route } from 'react-router-dom';
-import App from './App';
-import BlogPost from './../Components/BlogPost';
+import { createBrowserRouter } from "react-router-dom";
+import BlogPost from "../Components/BlogPost";
+import Home from "./../Pages/Home";
 
-const Routes: React.FC = () => {
-  return (
-    <Switch>
-      <Route exact path="/" component={App} />
-      <Route exact path="/post/:postId" component={BlogPost} />
-    </Switch>
-  );
-};
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home></Home>,
+  },
+  {
+    path: "/posts/:postId",
+    element: <BlogPost></BlogPost>,
+  },
+]);
 
-export default Routes;
+export default router;
+
+// return fetch(``)
+// .then((response) => response.json())
+// .then((data) => data.find((item) => item.id === params.id));
